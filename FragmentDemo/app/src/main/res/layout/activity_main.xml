@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <fragment
+        android:name="com.cx.fragmentdemo.TitleFragment"
+        android:id="@+id/title_frag"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+    </fragment>
+
+    <fragment
+        android:layout_below="@id/title_frag"
+        android:name="com.cx.fragmentdemo.MsgFragment"
+        android:id="@+id/msg_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </fragment>
+
+</RelativeLayout>
