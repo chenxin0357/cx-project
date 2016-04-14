@@ -1,11 +1,14 @@
 package com.cx.fragmentdemo;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import com.cx.fragmentdemo.com.cx.filepath.FilePathActivity;
 
 /**
  * Created by chenxin on 16/3/30.
@@ -19,6 +22,13 @@ public class TitleFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "title fragment back button. " , Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        view.findViewById(R.id.tv_title).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), FilePathActivity.class));
             }
         });
         return view;
